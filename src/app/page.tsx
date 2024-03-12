@@ -1,20 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
-import Intro from "@/components/parallex-scroll-with-gsap-locomotive/Intro";
-import Description from "@/components/parallex-scroll-with-gsap-locomotive/Description/Description";
+import DraggableLists from "@/components/draggable/DraggableLists";
+import FollowMouseEffect from "@/components/pointer/FollowMouseEffect";
 
 export default function Home() {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //     const locomotiveScroll = new LocomotiveScroll();
+  //   })();
+  // }, []);
+
   return (
-    <main className="flex flex-col gap-5">
-      <Intro />
-      <Description />
+    <main className="w-full bg-slate-900 min-h-screen">
+      {/* <FollowMouseEffect /> */}
+      <DraggableLists />
     </main>
   );
 }
